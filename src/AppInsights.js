@@ -32,7 +32,6 @@ define(["require", "exports"], function (require, exports) {
                 top = 10;
             }
             var settings = JSON.parse(widgetSettings.customSettings.data);
-            console.log(widgetSettings);
             if (settings && settings.apiKey && settings.applicationId) {
                 var applicationId = settings.applicationId;
                 var apiKey = settings.apiKey;

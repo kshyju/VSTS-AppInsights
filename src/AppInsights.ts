@@ -1,9 +1,3 @@
-
-import TfscRestClient = require("TFS/VersionControl/TfvcRestClient");
-import WorkRestClient = require("TFS/Work/RestClient");
-import TFS_VersionControl_Contracts = require("TFS/VersionControl/Contracts");
-
-
 export class AppInsights {
     constructor(private WidgetHelpers: any) {
 
@@ -70,8 +64,6 @@ export class AppInsights {
             $itemsContainer.empty();
             $.ajax(setting).done(function (result) {
 
-
-                console.log(result);
                 $.each(result.value, function (index, item) {
                     if (item.type === 'customEvent') {
                         var r = _this.getEventGridRow(item);

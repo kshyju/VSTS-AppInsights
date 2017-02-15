@@ -1,10 +1,9 @@
 {
   "manifestVersion": 1,
   "id": "AppInsightsExt",
-   "baseUri": "https://localhost/AppInsights",
-  "version": "1.0.7",
-  "name": "Insights",
-  "description": "See insights",
+  "version": "1.0.9",
+  "name": "App Insights Custom Events Widget",
+  "description": "See recent custom events from your Azure Application Insights resource.",
   "icons": {
     "default": "img/logo.png"
   },
@@ -22,9 +21,10 @@
         }
     },
   "tags": [
-    "code",
-    "change sets",
+    "Azure Application Insights",
+    "Custom Events",
     "App Insights",
+    "Azure",
     "Insights"
   ],
   "branding": {
@@ -52,7 +52,7 @@
       ],
       "properties": {
         "name": "App Insights",
-        "description": "Simple widget to show the most recent code commits",
+        "description": "Simple widget to show the most recent custom events in your azure application insights resource.",
         "catalogIconUrl:": "img/logo.png",
         "previewImageUrl": "img/logo.png",
         "uri": "index.html",
@@ -79,7 +79,7 @@
       "targets": [ "ms.vss-dashboards-web.widget-configuration" ],
       "properties": {
         "name": "AppInsights Widget Configuration",
-        "description": "Configures HelloWorldWidget",
+        "description": "Configures AppInsights widget",
         "uri": "configuration.html"
       }
 }
