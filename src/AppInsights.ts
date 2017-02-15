@@ -23,13 +23,9 @@ export class AppInsights {
 
 
     private getEventGridRow(item) {
-
-
         var rowMarkup = '<tr>';
         rowMarkup += '<td><div>';
-
         rowMarkup += item.customEvent.name;
-
         rowMarkup += '</div><div class="meta-date">' + this.getPrettyDate(item.timestamp) + '</div></td>';
         rowMarkup += '</tr>';
         return rowMarkup;

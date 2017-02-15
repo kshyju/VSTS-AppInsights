@@ -51,8 +51,7 @@ VSS.require(["TFS/Dashboards/WidgetHelpers"], (WidgetHelpers) => {
     WidgetHelpers.IncludeWidgetStyles();
     WidgetHelpers.IncludeWidgetConfigurationStyles();
     VSS.register("AppInsightsWidgetConfiguration", () => {
-        var configuration = new AppInsightsWidgetConfiguration(WidgetHelpers);
-        return configuration;
+        return  new AppInsightsWidgetConfiguration(WidgetHelpers);
     })
 
     VSS.notifyLoadSucceeded();
