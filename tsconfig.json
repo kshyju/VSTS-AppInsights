@@ -1,0 +1,15 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "module": "amd",
+        "moduleResolution": "classic",
+        "target": "es5",
+    "rootDir": "src/",
+        "outDir": "src/",
+        "types": [
+            "vss-web-extension-sdk"
+        ]   
+    
+    },
+    "files": ["src/AppInsights.ts" ,"src/AppInsightsWidgetConfiguration.ts","src/main.ts"]
+}

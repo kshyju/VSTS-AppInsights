@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="sdk/scripts/VSS.SDK.js"></script>
+
+</head>
+<body>
+    
+    <div class="widget-configuration">
+        <div class="widget-configuration">
+            <div class="single-line-text-input" style="margin-top: 10px;">
+                <label>Application Id</label>
+                <input type="text" id="appId" placeholder="Application ID (ex: ab1c2de3-f456-1234-a000-1a3877df1234 )" />
+                <span class="inline-error-configuration"><span class="inline-error-text"><i>You can get this from API Access option in the Application Insight resource page.</i></span></span>
+            </div>
+            <div class="single-line-text-input" style="margin-top: 10px;">
+                <label>API Key</label>
+                <input type="text" id="apiKey" placeholder="API Key (ex: abcdefghijklmnopqrstuv123456789abcd" />
+                <span class="inline-error-configuration"><span class="inline-error-text"><i>You can get this from API Access option in the Application Insight resource page</i></span></span>
+            </div>
+        </div>
+
+        </div>
+    <script type="text/javascript">
+        // Initialize the VSS SDK
+       
+        
+        VSS.init(
+        {
+            explicitNotifyLoaded: true,
+            setupModuleLoader: true,
+            usePlatformScripts: true,
+            usePlatformStyles: true
+        });
+
+        VSS.ready(function () {
+            
+            require(["src/AppInsightsWidgetConfiguration"], function (main) { });
+        });
+         
+    </script>
+
+</body>
+</html>

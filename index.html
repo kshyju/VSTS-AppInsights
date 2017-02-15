@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="sdk/scripts/VSS.SDK.js"></script>
+    
+    <style>
+    .table-insights
+    {
+        width: 100%;
+    }
+     .table-insights thead
+    {
+        font-weight: bold;
+    }
+    .table-insights tr
+    {
+        border-bottom:1px solid #e0e1e2;
+    }
+        .table-insights td
+    {
+       padding:3px;
+    } 
+    .meta-date
+    {
+        color: gray;
+        font-size: small;
+    }
+    </style>
+</head>
+<body>
+    <div class="widget">
+        <h2 class="title" id="widgetTitle" style="margin-bottom: 4px;">Recent custom events</h2>
+        <div class="description"  style="margin-bottom: 5px;" id="widgetSubTitle">From your Application Insights resource</div>
+
+        <div class="content">
+            <table id="items" class="table table-insights">
+                <thead>
+                    <td>Event Name</td>                    
+                </thead>
+                <tbody>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+    <script type="text/javascript">
+        
+        VSS.init(
+        {
+            explicitNotifyLoaded: true,
+            setupModuleLoader: true,
+            usePlatformScripts: true,
+            usePlatformStyles: true
+        });
+
+        VSS.ready(function () {            
+            require(["src/main"], function (main) { });
+        });
+         
+    </script>
