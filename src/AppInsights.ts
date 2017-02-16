@@ -52,7 +52,7 @@ export class AppInsights {
             var apiKey = settings.apiKey;
 
             var setting: JQueryAjaxSettings = {
-                url: 'https://api.applicationinsights.io/beta/apps/' + applicationId + '/events/$all?$top=' + top,
+                url: 'https://api.applicationinsights.io/beta/apps/' + applicationId + '/events/customEvents?$top=' + top,
                 headers: { "x-api-key": apiKey },
 
 
@@ -61,10 +61,10 @@ export class AppInsights {
             $.ajax(setting).done(function (result) {
 
                 $.each(result.value, function (index, item) {
-                    if (item.type === 'customEvent') {
+                  
                         var r = _this.getEventGridRow(item);
                         $itemsContainer.append(r);
-                    }
+                   
                 });
             }).fail(function (a, b, c) {
 

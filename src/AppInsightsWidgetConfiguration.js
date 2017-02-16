@@ -41,8 +41,7 @@ define(["require", "exports"], function (require, exports) {
         WidgetHelpers.IncludeWidgetStyles();
         WidgetHelpers.IncludeWidgetConfigurationStyles();
         VSS.register("AppInsightsWidgetConfiguration", function () {
-            var configuration = new AppInsightsWidgetConfiguration(WidgetHelpers);
-            return configuration;
+            return new AppInsightsWidgetConfiguration(WidgetHelpers);
         });
         VSS.notifyLoadSucceeded();
     });

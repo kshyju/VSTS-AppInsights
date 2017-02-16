@@ -36,17 +36,14 @@ define(["require", "exports"], function (require, exports) {
                 var applicationId = settings.applicationId;
                 var apiKey = settings.apiKey;
                 var setting = {
-                    url: 'https://api.applicationinsights.io/beta/apps/' + applicationId + '/events/$all?$top=' + top,
+                    url: 'https://api.applicationinsights.io/beta/apps/' + applicationId + '/events/customEvents?$top=' + top,
                     headers: { "x-api-key": apiKey },
                 };
                 $itemsContainer.empty();
                 $.ajax(setting).done(function (result) {
-                    console.log(result);
                     $.each(result.value, function (index, item) {
-                        if (item.type === 'customEvent') {
-                            var r = _this.getEventGridRow(item);
-                            $itemsContainer.append(r);
-                        }
+                        var r = _this.getEventGridRow(item);
+                        $itemsContainer.append(r);
                     });
                 }).fail(function (a, b, c) {
                     console.log(a);
