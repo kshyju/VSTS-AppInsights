@@ -1,15 +1,15 @@
 {
   "manifestVersion": 1,
   "id": "AppInsightsExt",
-  "version": "1.1.5",
-  "name": "App Insights Custom Events Widget",
+  "version": "1.1.7",
+  "name": "App Insights Events Widget",
   "description": "See recent custom events from your Azure Application Insights resource.",
  
   "icons": {
     "default": "img/appinsights-logo.png"
   },
   "categories": [
-    "Plan and track"
+    "Integrate"
   ],
   "content": {
         "details": {
@@ -25,7 +25,10 @@
     "Azure Application Insights",
     "Custom Events",
     "App Insights",
+    "Analytics",
+    "Azure Application events",
     "Azure",
+    "Application Insights",
     "Insights"
   ],
   "branding": {
@@ -53,7 +56,7 @@
       ],
       "properties": {
         "name": "App Insights",
-        "description": "Simple widget to show the most recent custom events in your azure application insights resource.",
+        "description": "Simple widget to show the most recent events in your azure application insights resource.",
         "catalogIconUrl:": "img/appinsights-logo.png",
         "previewImageUrl": "img/appinsights-logo.png",
         "uri": "index.html",
